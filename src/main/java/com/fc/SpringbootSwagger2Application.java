@@ -3,6 +3,8 @@ package com.fc;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 
 /**
@@ -12,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan(value = "com.fc.test.mapper")
-public class SpringbootSwagger2Application {
+public class SpringbootSwagger2Application /*extends SpringBootServletInitializer*/ {
 
     public static void main(String[] args) {
 
@@ -21,4 +23,11 @@ public class SpringbootSwagger2Application {
         System.out.println("=============启动成功===============");
         System.out.println("=================================");
     }
+
+    /*@Override//为了打包springboot项目
+    protected SpringApplicationBuilder configure(
+            SpringApplicationBuilder builder) {
+        return builder.sources(this.getClass());
+    }*/
+
 }

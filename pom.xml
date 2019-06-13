@@ -6,7 +6,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>springboot_v2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>springboot_v2</name>
 	<description>Demo project for Spring Boot</description>
@@ -61,7 +61,11 @@
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 		</dependency>
-
+		<!-- 鉴权 设置swagger2查看需要密码-->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-security</artifactId>-->
+		<!--</dependency>-->
 
 		<!-- pageHelper -->
 		<dependency>
@@ -181,6 +185,7 @@
 
 
 	<build>
+		<finalName>springboot_v2</finalName>
 		<plugins>
 			<!-- JUnit 配置 -->
 			<plugin>
